@@ -1,9 +1,18 @@
-import React from 'react';
+import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
-    return (
-        <div>
-            <h1>Login</h1>
-        </div>
-    )
-}
+  return (
+    <Form>
+      <FormGroup>
+        <Label>Email</Label>
+        <Input type="text" placeholder="Enter Email"></Input>
+        <Label>Password</Label>
+        <Input type="text" placeholder="Enter Password"></Input>
+      </FormGroup>
+      <Link to="/">
+        <Button>Submit</Button>
+      </Link>
+    </Form>
+  );
+};

@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { AlbumList } from "./AlbumList";
+import { PostList } from "./PostList";
+import AppProvider from "./AppProvider";
 
 export const Home = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <AppProvider>
+        <AlbumList />
+        <PostList />
+      </AppProvider>
+    </div>
+  );
+};
