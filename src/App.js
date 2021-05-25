@@ -13,8 +13,8 @@ function App() {
         <Navigation />
         <Switch> 
           {/* Add more Routes here if needed */}
+          <Route exact path="/albums-and-posts" component={Login} />
           <Route path="/home" component={Home} />
-          <Route exact path="/" component={Login} />
           <Route path="/post/:id" component={PostDetails} />
           <Route path="/albums/:id" component={AlbumDetails} />
         </Switch>
