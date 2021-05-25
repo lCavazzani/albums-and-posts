@@ -14,7 +14,7 @@ export const PostList = () => {
         >{`Sorting: ${sortConfigPost}`}</Button>
         {posts.length > 0 ? (
           <>
-            {posts.slice(0, 5).map((post) => (
+            {posts.slice(0, 5).map((post) => ( // Limiting the size of list here. Add pagination for improvment 
               <ListGroupItem className="d-flex" key={post.id}>
                 <strong style={{ marginRight: "auto" }}>{post.title}</strong>
                 <div className="ml-auto">
@@ -22,7 +22,7 @@ export const PostList = () => {
                     to={`/post/${post.id}`}
                     color="warning"
                     className="btn btn-warning"
-                    style={{ width: 250 }}
+                    style={{ width: 250, backgroundColor: "#f9423a", color:"#ffffff" }}
                   >
                     Edit
                   </Link>
@@ -31,7 +31,7 @@ export const PostList = () => {
             ))}
           </>
         ) : (
-          <h4 className="text-center">No Albums</h4>
+          <h4 className="text-center">No Posts</h4>
         )}
       </ListGroup>
     </>

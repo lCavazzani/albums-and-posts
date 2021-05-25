@@ -4,7 +4,6 @@ import { Login } from "./components/Login";
 import { Navigation } from "./components/Navigation";
 import { PostDetails } from "./components/PostDetails";
 import { AlbumDetails } from "./components/AlbumDetails";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -12,7 +11,8 @@ function App() {
     <div style={{ maxWidth: "50rem", margin: "4rem auto" }}>
       <Router>
         <Navigation />
-        <Switch>
+        <Switch> 
+          {/* Add more Routes here if needed */}
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/post/:id" component={PostDetails} />

@@ -8,7 +8,7 @@ export const AlbumList = () => {
 
   return (
     <>
-      <h1  className="mt-3">Albums List</h1>
+      <h1 className="mt-3">Albums List</h1>
       <ListGroup className="mt-1">
         <Button
           onClick={() => sortList(albums.slice(0, 5), "albums")}
@@ -23,7 +23,11 @@ export const AlbumList = () => {
                     to={`/albums/${album.id}`}
                     color="warning"
                     className="btn btn-warning"
-                    style={{ width: 250 }}
+                    style={{
+                      width: 250,
+                      backgroundColor: "#f9423a",
+                      color: "#ffffff",
+                    }}
                   >
                     View
                   </Link>

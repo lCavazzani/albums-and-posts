@@ -11,7 +11,15 @@ export const Login = () => {
         <Input type="text" placeholder="Enter Password"></Input>
       </FormGroup>
       <Link to="/">
-        <Button>Submit</Button>
+        <Button
+          style={{
+            width: 250,
+            backgroundColor: "#f9423a",
+            color: "#ffffff",
+          }}
+        >
+          Submit
+        </Button>
       </Link>
     </Form>
   );

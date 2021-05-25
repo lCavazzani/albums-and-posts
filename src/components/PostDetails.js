@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Form, FormGroup, Label } from "reactstrap";
 
 export const PostDetails = (props) => {
   const [selectedPost, setSelectedPost] = useState({
@@ -26,7 +26,7 @@ export const PostDetails = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // editUser(selectedPost);
+    // Add the edit functionality, do a PUT call to api with form data
     history.push("/");
   };
 
@@ -43,7 +43,7 @@ export const PostDetails = (props) => {
         </div>
       </FormGroup>
       {/* <Button type="submit">Edit Post</Button> */}
-      <Link to="/" className="btn btn-danger ml-2">
+      <Link to="/" className="btn ml-2">
         Back
       </Link>
     </Form>
