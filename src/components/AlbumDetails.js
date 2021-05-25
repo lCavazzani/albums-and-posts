@@ -23,7 +23,8 @@ export const AlbumDetails = (props) => {
       console.log("selectedAlbum", selectedAlbum)
     }
     fetchPost();
-  }, [albumId, selectedAlbum]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <ListGroup className="mt-4">

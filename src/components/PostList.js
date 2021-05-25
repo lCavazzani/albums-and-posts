@@ -4,25 +4,28 @@ import { ListGroup, ListGroupItem, Button } from "reactstrap";
 import AppContext from "../context/AppContext";
 
 export const PostList = () => {
-  const { posts } = useContext(AppContext);
+  const { posts, sortConfigPost, sortList } = useContext(AppContext);
   return (
     <>
-      <h1>Posts List</h1>
-      <ListGroup className="mt-4">
+      <h1 className="mt-3">Posts List</h1>
+      <ListGroup className="mt-1">
+        <Button
+          onClick={() => sortList(posts.slice(0, 5), "posts")}
+        >{`Sorting: ${sortConfigPost}`}</Button>
         {posts.length > 0 ? (
           <>
             {posts.slice(0, 5).map((post) => (
               <ListGroupItem className="d-flex" key={post.id}>
-                <strong style={{ marginRight: 200 }}>{post.title}</strong>
+                <strong style={{ marginRight: "auto" }}>{post.title}</strong>
                 <div className="ml-auto">
                   <Link
                     to={`/post/${post.id}`}
                     color="warning"
-                    className="btn btn-warning mr-1"
+                    className="btn btn-warning"
+                    style={{ width: 250 }}
                   >
                     Edit
                   </Link>
-                  <Button color="danger">Delete</Button>
                 </div>
               </ListGroupItem>
             ))}

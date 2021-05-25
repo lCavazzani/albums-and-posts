@@ -4,26 +4,29 @@ import { ListGroup, ListGroupItem, Button } from "reactstrap";
 import AppContext from "../context/AppContext";
 
 export const AlbumList = () => {
-  const { albums } = useContext(AppContext);
+  const { albums, sortList, sortConfigAlbums } = useContext(AppContext);
 
   return (
     <>
-      <h1>Albums List</h1>
-      <ListGroup className="mt-4">
+      <h1  className="mt-3">Albums List</h1>
+      <ListGroup className="mt-1">
+        <Button
+          onClick={() => sortList(albums.slice(0, 5), "albums")}
+        >{`Sorting: ${sortConfigAlbums}`}</Button>
         {albums.length > 0 ? (
           <>
             {albums.slice(0, 5).map((album) => (
               <ListGroupItem className="d-flex" key={album.id}>
-                <strong style={{ marginRight: 200 }}>{album.title}</strong>
+                <strong style={{ marginRight: "auto" }}>{album.title}</strong>
                 <div className="ml-auto">
                   <Link
                     to={`/albums/${album.id}`}
                     color="warning"
-                    className="btn btn-warning mr-1"
+                    className="btn btn-warning"
+                    style={{ width: 250 }}
                   >
-                    Edit
+                    View
                   </Link>
-                  <Button color="danger">Delete</Button>
                 </div>
               </ListGroupItem>
             ))}
