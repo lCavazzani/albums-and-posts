@@ -12,7 +12,7 @@ export const Navigation = () => {
   return (
     <Navbar style={{ background: "#f8cd46" }}>
       <Container>
-        <Link to="/login">
+        <Link to="/">
           <NavbarBrand>
             <Media
               style={{ width: 200 }}
@@ -26,7 +26,7 @@ export const Navigation = () => {
             {/* hide it according to current page, no need to show it at Home */}
             <Link
               className="btn btn-primary"
-              to="/"
+              to="/home"
               style={{
                 width: 250,
                 backgroundColor: "#f9423a",

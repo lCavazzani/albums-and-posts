@@ -43,7 +43,7 @@ export const PostDetails = (props) => {
         </div>
       </FormGroup>
       {/* <Button type="submit">Edit Post</Button> */}
-      <Link to="/" className="btn ml-2">
+      <Link to="/home" className="btn ml-2">
         Back
       </Link>
     </Form>

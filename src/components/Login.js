@@ -10,7 +10,7 @@ export const Login = () => {
         <Label>Password</Label>
         <Input type="text" placeholder="Enter Password"></Input>
       </FormGroup>
-      <Link to="/">
+      <Link to="/home">
         <Button
           style={{
             width: 250,
