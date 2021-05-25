@@ -12,7 +12,7 @@ export const Navigation = () => {
   return (
     <Navbar style={{ background: "#f8cd46" }}>
       <Container>
-        <Link to="/">
+        <Link to="/albums-and-posts">
           <NavbarBrand>
             <Media
               style={{ width: 200 }}
